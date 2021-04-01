@@ -38,20 +38,20 @@ public class DBTest {
 		 * Sobald ich das Angebot eingetragen habe, 
 		 * trage ich den korrekten Wert in das Objekt ein
 		 */
-		Angebot neu = new Angebot(0, "Mohnbrˆtchen", "Hefeteig 200g", 1.20);
+		Angebot neu = new Angebot(0, "Mohnbr√∂tchen", "Hefeteig 200g", 1.20);
 		System.out.println(neu);
 		dba.schreibeAngebot(neu);
 		//danach sollte neu jetzt die richtige AngebotId bekommen haben
 		System.out.println(neu.getAngebotid());
 		
 //		dba.schreibePLZ(45147, "Essen");
-		//Beim zweiten und jedem weiteren Mal, wird der Schl¸ssel dupliziert :(
+		//Beim zweiten und jedem weiteren Mal, wird der Schl√ºssel dupliziert :(
 		
 		ArrayList<Bestellung> albest = dba.ladeBestelliste(k);
 		System.out.println(albest);
 		
 		System.out.println("Adresse schreiben");
-//		dba.schreibeAdresse("Hochstraﬂe", "10A", 12347);
+//		dba.schreibeAdresse("Hochstra√üe", "10A", 12347);
 		/*
 		 * Testdaten: eine Bestellung mit 2 Bestellpositionen
 		 */
@@ -67,10 +67,10 @@ public class DBTest {
 		System.out.println(dba.ladeBestelliste(k));
 		
 		
-		Kunde kNeu = new Kunde("Nicole", "Forouhar", "Dresdener Straﬂe", "46", "45145", "Essen");
+		Kunde kNeu = new Kunde("Nicole", "Knoten", "Lalala Stra√üe", "13", "45145", "Essen");
 		dba.schreibeKunde(kNeu);
 		
-		//als letztes Connection schlieﬂen
+		//als letztes Connection schlie√üen
 		dba.schliesseDB();
 	}
 
